@@ -118,6 +118,11 @@ This is very readable and users can run in own console!
 
 Tokuhiro Matsuno E<lt>tokuhirom@gmail.comE<gt>
 
+=head1 THANKS TO
+
+    Tatsuhiko Miyagawa
+    charsbar
+
 =head1 SEE ALSO
 
 L<Test::Pod::Snippets>, L<Test::Inline>
