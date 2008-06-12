@@ -48,7 +48,7 @@ sub test_snippet_in_pod {
             next if $c->type eq 'text';
             if ($c->type eq 'text') {
                 # nop.
-            } elsif ($c->type eq 'begin' && $c->format eq 'test') {
+            } elsif (($c->type eq 'begin' || $c->type eq 'for') && $c->format eq 'test') {
                 # do it
                 test_snippet( $c->content );
             } else {
@@ -62,6 +62,8 @@ sub test_snippet_in_pod {
 
 1;
 __END__
+
+=for stopwords doctest API
 
 =encoding utf8
 
@@ -99,11 +101,26 @@ Test::Snippet is doctest for perl.
 
 THIS MODULE IS IN ITS BETA QUALITY. API MAY CHANGE IN THE FUTURE.
 
+=head1 FAQ
+
+=over 4
+
+=item How does this compare to Test::Inline, or Test::Pod::Snippets?
+
+Very similar.
+
+But, Test::Snippet way is based on REPL(read eval print loop).
+This is very readable and users can run in own console!
+
+=back
+
 =head1 AUTHOR
 
 Tokuhiro Matsuno E<lt>tokuhirom@gmail.comE<gt>
 
 =head1 SEE ALSO
+
+L<Test::Pod::Snippets>, L<Test::Inline>
 
 =head1 LICENSE
 
