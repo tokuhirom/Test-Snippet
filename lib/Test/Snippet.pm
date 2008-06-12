@@ -67,7 +67,7 @@ __END__
 
 =head1 NAME
 
-Test::Snippet -
+Test::Snippet - doctest for perl
 
 =head1 SYNOPSIS
 
@@ -95,7 +95,9 @@ Test::Snippet -
 
 =head1 DESCRIPTION
 
-Test::Snippet is
+Test::Snippet is doctest for perl.
+
+THIS MODULE IS IN ITS BETA QUALITY. API MAY CHANGE IN THE FUTURE.
 
 =head1 AUTHOR
 
