@@ -14,7 +14,7 @@ Acme::Test - testing acme
 
 blah blah blah
 
-=begin test
+=begin snippet
 
 $ 3+2
 5

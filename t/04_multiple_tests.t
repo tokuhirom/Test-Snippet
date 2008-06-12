@@ -13,14 +13,14 @@ Acme::Test - testing acme
 
 =head1 SYNOPSIS
 
-=begin test label1
+=begin snippet label1
 
 $ 3+2
 5
 
-=end test
+=end snippet
 
-=begin test label2
+=begin snippet label2
 
 $ [2,5,5,{foo => 'bar'}]
 $ARRAY1 = [
@@ -29,4 +29,4 @@ $ARRAY1 = [
             { foo => 'bar' }
           ];
 
-=end test
+=end snippet

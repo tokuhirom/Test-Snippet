@@ -47,7 +47,7 @@ sub test_snippet_in_pod {
         for my $c ($c->content) {
             if ($c->type eq 'text') {
                 # nop.
-            } elsif (($c->type eq 'begin' || $c->type eq 'for') && $c->format =~ /^test(?:\s+(.*)|$)/) {
+            } elsif (($c->type eq 'begin' || $c->type eq 'for') && $c->format =~ /^snippet(?:\s+(.*)|$)/) {
                 my $label = $1;
                 # do it
                 test_snippet( $c->content, $label );
@@ -87,7 +87,7 @@ Test::Snippet - doctest for perl
 
     ...
 
-    =begin test
+    =begin snippet
 
     $ 4*5
     20
