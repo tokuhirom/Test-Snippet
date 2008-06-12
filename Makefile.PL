@@ -4,7 +4,7 @@ all_from 'lib/Test/Snippet.pm';
 
 requires 'Exporter' => '5.58';
 requires 'Test::Builder';
-requires 'Pod::Pom' => 0.17;
+requires 'Pod::POM' => 0.17;
 requires 'Devel::REPL' => '1.002001';
 
 recursive_author_tests('xt');
