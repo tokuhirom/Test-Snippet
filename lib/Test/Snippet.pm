@@ -15,7 +15,7 @@ our $Dumper = \&Data::Dumper::Dumper;
 our $Driver;
 
 sub test_snippet {
-    my $test = shift;
+    my ($test, $label) = @_;
 
     unless ($Driver) {
         eval "use Test::Snippet::Driver::DevelREPL;"; ## no critic
@@ -28,7 +28,7 @@ sub test_snippet {
     my $got_dumped = $Dumper->($got);
     my $expected_dumped = $Dumper->($expected);
     my $diff = diff(\$got_dumped, \$expected_dumped);
-    $CLASS->builder->ok($got_dumped eq $expected_dumped);
+    $CLASS->builder->ok($got_dumped eq $expected_dumped, $label);
     if ($diff) {
         $CLASS->builder->diag($diff);
     }
@@ -47,9 +47,10 @@ sub test_snippet_in_pod {
         for my $c ($c->content) {
             if ($c->type eq 'text') {
                 # nop.
-            } elsif (($c->type eq 'begin' || $c->type eq 'for') && $c->format eq 'test') {
+            } elsif (($c->type eq 'begin' || $c->type eq 'for') && $c->format =~ /^test(?:\s+(.*)|$)/) {
+                my $label = $1;
                 # do it
-                test_snippet( $c->content );
+                test_snippet( $c->content, $label );
             } else {
                 $traverse->($c); # recurse.
             }
