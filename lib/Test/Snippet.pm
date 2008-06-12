@@ -18,7 +18,7 @@ sub test_snippet {
     my $test = shift;
 
     unless ($Driver) {
-        eval "use Test::Snippet::Driver::DevelREPL;";
+        eval "use Test::Snippet::Driver::DevelREPL;"; ## no critic
         die $@ if $@;
         $Driver = Test::Snippet::Driver::DevelREPL->new();
     }
