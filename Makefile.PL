@@ -3,7 +3,7 @@ name 'Test-Snippet';
 all_from 'lib/Test/Snippet.pm';
 
 requires 'Exporter' => '5.58';
-requires 'Test::Builder';
+requires 'Test::Builder' => '0.80';
 requires 'Pod::POM' => 0.17;
 requires 'Devel::REPL' => '1.002001';
 
