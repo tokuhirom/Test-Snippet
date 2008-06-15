@@ -63,7 +63,7 @@ sub test_snippet_in_pod {
 1;
 __END__
 
-=for stopwords doctest API
+=for stopwords doctest API FAQ
 
 =encoding utf8
 
