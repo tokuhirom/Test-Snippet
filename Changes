@@ -1,4 +1,8 @@
 Revision history for Perl extension Test::Snippet
 
+0.02
+
+    - fixed deps
+
 0.01    Wed Jun 11 19:32:57 2008
         - original version

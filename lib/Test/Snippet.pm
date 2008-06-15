@@ -2,7 +2,7 @@ package Test::Snippet;
 use strict;
 use warnings;
 use 5.00800;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use base qw/Test::Builder::Module/;
 use Text::Diff qw(diff);
 use Data::Dumper;
