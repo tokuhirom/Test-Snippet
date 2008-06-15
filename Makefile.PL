@@ -6,6 +6,7 @@ requires 'Exporter' => '5.58';
 requires 'Test::Builder' => '0.80';
 requires 'Pod::POM' => 0.17;
 requires 'Devel::REPL' => '1.002001';
+requires 'Text::Diff' => 0.35;
 
 tests 't/*.t t/*/*.t t/*/*/*.t t/*/*/*/*.t';
 test_requires 'Test::More';
